@@ -35,7 +35,7 @@ class ContactsLocalDatabase {
     await db.execute("""CREATE TABLE contacts (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       name TEXT NOT NULL,
-      phoneNumber TEXT NOT NULL,
+      phoneNumber TEXT NOT NULL
     )
     """);
   }
@@ -56,6 +56,7 @@ class ContactsLocalDatabase {
 
   Future<void> addContact(
       {required String name, required String phoneNumber}) async {
+    print(name);
     await _database!.insert(
       "contacts",
       {

@@ -78,13 +78,19 @@ class CustomContactsWidget extends StatelessWidget {
                     onEdit(returnedContact);
                   }
                 },
-                icon: const Icon(Icons.edit),
+                icon: const Icon(
+                  Icons.edit,
+                  color: Color.fromARGB(163, 33, 149, 243),
+                ),
               ),
               IconButton(
                 onPressed: () {
                   onDelete(contact.id);
                 },
-                icon: const Icon(Icons.delete),
+                icon: const Icon(
+                  Icons.delete,
+                  color: Color.fromARGB(188, 244, 67, 54),
+                ),
               ),
             ],
           ),
